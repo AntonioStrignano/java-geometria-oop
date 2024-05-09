@@ -4,18 +4,16 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
-
 		Scanner input = new Scanner(System.in);
-		
-		Rettangolo rettUtente = new Rettangolo();
-		//chiediamo le misure
+		//chiedo base e altezza all'utente
 		System.out.println("Base rettangolo: ");
-		rettUtente.setBase(input.nextInt());
+		int baseUtente = (input.nextInt());
 		System.out.println("Altezza rettangolo: ");
-		rettUtente.setAltezza(input.nextInt());
+		int altezzaUtente = (input.nextInt());
+		//inizializzo rettangolo
+		Rettangolo rettUtente = new Rettangolo(baseUtente,altezzaUtente);
 		
-		System.out.println("Area rettangolo: " + rettUtente.calcolaArea());
-		System.out.println("Perimetro rettangolo: " + rettUtente.calcolaPerimetro());
-
+		System.out.println("Area rettangolo: " + rettUtente.getArea());
+		System.out.println("Perimetro rettangolo: " + rettUtente.getPerimetro());
 	}
 }
