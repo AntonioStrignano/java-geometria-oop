@@ -6,13 +6,13 @@ public class Main {
 	public static void main(String[] args) {
 
 		Scanner input = new Scanner(System.in);
+		
+		Rettangolo rettUtente = new Rettangolo();
 		//chiediamo le misure
 		System.out.println("Base rettangolo: ");
-		int baseUtente = input.nextInt();
+		rettUtente.setBase(input.nextInt());
 		System.out.println("Altezza rettangolo: ");
-		int altezzaUtente = input.nextInt();
-		
-		Rettangolo rettUtente = new Rettangolo(baseUtente, altezzaUtente);
+		rettUtente.setAltezza(input.nextInt());
 		
 		System.out.println("Area rettangolo: " + rettUtente.calcolaArea());
 		System.out.println("Perimetro rettangolo: " + rettUtente.calcolaPerimetro());
